@@ -1,0 +1,88 @@
+// @purpose     To create and individualise entities
+
+package Entities;
+
+//1 It creates an entity object with standard settings
+//2 The object stores and updates continualy its descriptions
+
+// Form convenience:
+// Return values are Array lists *even size 1
+
+import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Entity {
+    // HashMap for all object values
+    private HashMap<String, ArrayList<String>> data;
+
+    public Entity(String ID, String Type) {
+        // HashMap creation
+        data = new HashMap<String, ArrayList<String>>();
+
+        // Default data
+        set("ID", ID);        // adding identification number of entity
+        set("Type", Type);    // adding type of entity
+        defaultSetting(Type); //default adaptions
+    }
+    // Default settings
+    public void defaultSetting(String Type) {
+        if(Type == "Human"){
+            set("language", "English");
+        }
+    }
+
+    // *** Getter methods
+    // Get Key > ArrayList
+    public ArrayList<String> get(String key) {
+        return data.get(key);
+    }
+    // Get Key > ArryList > index
+    public ArrayList<String> getAt(String key, String toSearch) {
+        ArrayList<String> values = new ArrayList<>();
+        values.add(""+data.get(key).indexOf(toSearch));
+        return values;
+    }
+    // Get allKeys > ArryList
+    public ArrayList<String> getAll() {
+        ArrayList<String> toReturn = new ArrayList<String>();
+        for (Map.Entry<String, ArrayList<String>> i : data.entrySet()) {
+            toReturn.add("" + i.getKey() + "=" + data.get(i.getKey()));
+        }
+        return toReturn;
+    }
+
+    // *** Setter methods
+    // Set Key > add > index
+    public void set(String key, String toAdd) {
+        data.putIfAbsent(key, new ArrayList<String>());
+        data.get(key).add(toAdd);
+    }
+    // Set Key > edit > index
+    public void setAt(String key, String toAdd, String index) {
+        data.get(key).set(Integer.parseInt(index),toAdd);
+    }
+
+    // *** Remove methods
+    // Remove Key > one > index
+    public void removeAt(String key, String index) {
+        data.get(key).remove(Integer.parseInt(index));
+    }
+    // Remove Key > one > index > if match
+    public void removeIf(String key, String refference) {
+        data.get(key).remove(refference);
+    }
+    // Remove Key > all > indexes   // capitalCities.remove("England");
+    public void removeAll(String key, String refference) {
+        data.get(key).removeAll(data.get(key));
+    }
+    // Remove Key
+    public void removeKey(String key) {
+        data.remove(key);
+    }
+    // Remove HashMap          //( capitalCities.clear(); )
+    public void removeHashMap() {
+        data.clear();
+    }
+}
