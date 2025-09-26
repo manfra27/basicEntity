@@ -1,88 +1,222 @@
-// @purpose     To create and individualise entities
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+  <title>WELCOME 2 MY PAGE!!!!!!! 💥💾✨</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="generator" content="Microsoft FrontPage 3.0, Netscape Composer, and pure chaos">
+  <meta name="keywords" content="cool, page, 1997, awesome, free, webring, blink, marquee, under construction">
+  <meta http-equiv="refresh" content="12">
+  <style type="text/css">
+    /* Crimes against CSS (and taste) */
+    body {
+      background: url('https://media.giphy.com/media/3o7btXJQm5DD8q8tIk/giphy.gif') repeat fixed;
+      color: #00FF00;
+      font-family: "Comic Sans MS", "Times New Roman", cursive, serif;
+      cursor: crosshair;
+    }
+    a:link { color: #FF00FF; }
+    a:visited { color: #FFFF00; }
+    a:active { color: #00FFFF; }
+    .rainbow {
+      font-weight: 900;
+      font-size: 32px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 0 #FF0000, -2px -2px 0 #00FFFF, 2px -2px 0 #00FF00, -2px 2px 0 #FF00FF;
+      -webkit-text-stroke: 1px #FFFFFF;
+    }
+    .glow {
+      animation: glow 0.7s infinite alternate ease-in-out;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff; }
+      to   { text-shadow: 0 0 15px #ff0, 0 0 30px #f0f, 0 0 45px #f00; }
+    }
+    .btn {
+      border: 5px outset #FF00FF;
+      background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+      padding: 8px 20px;
+      color: #000;
+      font-weight: bold;
+    }
+    .tile {
+      background: url('https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif') repeat;
+      border: 8px ridge #00FFFF;
+    }
+    .counter {
+      font: 700 18px "Courier New", monospace;
+      background: #000;
+      color: #0F0;
+      padding: 6px;
+      border: 6px inset #0FF;
+      width: 120px;
+      text-align: center;
+    }
+    .blink { animation: blinker 0.3s linear infinite; }
+    @keyframes blinker { 50% { opacity: 0; } }
+    .sparkle { filter: hue-rotate(360deg); animation: spin 4s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .center { text-align: center; }
+    .marquee-box { border: 10px groove #FF0; padding: 6px; background: #330033; }
+    .visitorbook { background: #003300; padding: 10px; border: 10px outset #33FF33; }
+    .table-border { border: 12px double #FF00FF; }
+      /* Disturbing headline + epileptic flash (non‑NSFW) */
+    .avocado-headline { font-size: 64px; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; padding: 10px 16px; border: 14px groove #00FF00; background: repeating-linear-gradient(45deg,#ff00ff 0 10px,#00ffff 10px 20px,#ffff00 20px 30px,#00ff00 30px 40px); color: #000; text-shadow: 4px 4px 0 #fff, -4px -4px 0 #f0f; animation: shake 0.3s infinite, hue 1s linear infinite; }
+    .mega-blink { animation: blinker 0.15s steps(2) infinite; }
+    @keyframes shake { 0%{transform:translate(0,0) rotate(0)} 25%{transform:translate(2px,-2px) rotate(-1deg)} 50%{transform:translate(-3px,2px) rotate(1deg)} 75%{transform:translate(3px,1px) rotate(-2deg)} 100%{transform:translate(0,0) rotate(0)} }
+    @keyframes hue { to { filter:hue-rotate(360deg); } }
 
-package Entities;
+    .epileptic-box { position: relative; overflow: hidden; border: 12px ridge #FF00FF; margin: 8px 0 16px; }
+    .epileptic-tiles { height: 180px; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAACSCAYAAABom1AeAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4nO3de5yVdb3/8c+Zl2wGqgEJmGQ2pQ2hJZqUKqVDk4c2mGkS1Q4X0Dg1x1m0qYtOqk2FQbYQkQ9hZ2LpQjH3pQvGqB7p0Qz1aID6t0QH1Tt1uO7/7v9f8m7b1vZ+5xz7p3z+O/Pc+55zzm0l7+1hYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWYDa/LBKYRw0QDimuzWLvYvcPHhWnUUWKcAAAAASUVORK5CYII='); background-size: 160px 90px; background-repeat: repeat; animation: strobe 0.06s steps(2) infinite; }
+    .epileptic-overlay { position:absolute; inset:0; mix-blend-mode: difference; animation: flashbg 0.12s steps(2) infinite; }
+    @keyframes strobe { 0%{filter:invert(0) contrast(1)} 50%{filter:invert(1) contrast(2)} 100%{filter:invert(0) contrast(1)} }
+    @keyframes flashbg { 0%{background:#000} 50%{background:#fff} 100%{background:#000} }
+</style>
+  <script>
+    // Title strobe + status bar spam (authentically obnoxious)
+    (function(){
+      var x = 0; var msg = [
+        'WELCOME TO THE FUTURE (1997)',
+        'BEST VIEWED IN NETSCAPE 3.0',
+        'UNDER CONSTRUCTION!!!',
+        'TURN ON YOUR SPEAKERS!!!',
+        'SIGN MY GUESTBOOK!!!'
+      ];
+      setInterval(function(){ document.title = msg[x = (x+1)%msg.length]; }, 500);
+      setInterval(function(){ window.status = msg[Math.floor(Math.random()*msg.length)]; }, 400);
+    })();
 
-//1 It creates an entity object with standard settings
-//2 The object stores and updates continualy its descriptions
+    // Cursor trail stars (because why not)
+    document.addEventListener('mousemove', function(e){
+      var s = document.createElement('span');
+      s.innerHTML = '✦';
+      s.style.position = 'fixed';
+      s.style.left = e.clientX + 'px';
+      s.style.top = e.clientY + 'px';
+      s.style.pointerEvents = 'none';
+      s.style.fontSize = (8 + Math.random()*24) + 'px';
+      s.style.color = 'hsl(' + (Math.random()*360) + ',100%,60%)';
+      s.style.transition = 'all 1s ease-out';
+      document.body.appendChild(s);
+      setTimeout(function(){ s.style.transform = 'translateY(-60px)'; s.style.opacity = 0; }, 10);
+      setTimeout(function(){ s.remove(); }, 1000);
+    });
 
-// Form convenience:
-// Return values are Array lists *even size 1
+    function addCounter(){
+      var n = parseInt(localStorage.getItem('hits')||'0',10)+1;
+      localStorage.setItem('hits', n);
+      document.getElementById('hits').innerText = ('0000000' + n).slice(-7);
+    }
+    window.onload = addCounter;
+  </script>
+</head>
 
-import java.util.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Collectors;
+<!-- Start of sacred table layout -->
+<body bgcolor="#000000" text="#33FF33" link="#FF00FF" vlink="#00FFFF" alink="#FFFF00">
 
-public class Entity {
-    // HashMap for all object values
-    private HashMap<String, ArrayList<String>> data;
+  <!-- Autoplay music (IE + everyone else) -->
+  <bgsound src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monplaisir/Take_the_Lead/Monplaisir_-_02_-_Arcade_Dance.mp3" loop="infinite">
+  <embed src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monplaisir/Take_the_Lead/Monplaisir_-_02_-_Arcade_Dance.mp3" hidden="true" autostart="true" loop="true"></embed>
 
-    public Entity(String ID, String Type) {
-        // HashMap creation
-        data = new HashMap<String, ArrayList<String>>();
+  <center>
+    <marquee scrollamount="50" behavior="alternate" direction="right" class="marquee-box mega-blink">
+      <span class="avocado-headline">JASON GOT AVOCADO BALLS</span>
+    </marquee>
+    <div class="epileptic-box">
+      <div class="epileptic-tiles"></div>
+      <div class="epileptic-overlay"></div>
+    </div>
+    <img class="sparkle" src="https://media.giphy.com/media/xTiTnBvMZlK3Zz7nJK/giphy.gif" alt="UNDER CONSTRUCTION" width="200" height="200">
 
-        // Default data
-        set("ID", ID);        // adding identification number of entity
-        set("Type", Type);    // adding type of entity
-        defaultSetting(Type); //default adaptions
-    }
-    // Default settings
-    public void defaultSetting(String Type) {
-        if(Type == "Human"){
-            set("language", "English");
-        }
-    }
+    <marquee scrollamount="30" behavior="alternate" direction="left" class="marquee-box">
+      <span class="rainbow glow">WELCOME TO MY MEGA ULTRA HOMEPAGE!!!</span>
+    </marquee>
 
-    // *** Getter methods
-    // Get Key > ArrayList
-    public ArrayList<String> get(String key) {
-        return data.get(key);
-    }
-    // Get Key > ArryList > index
-    public ArrayList<String> getAt(String key, String toSearch) {
-        ArrayList<String> values = new ArrayList<>();
-        values.add(""+data.get(key).indexOf(toSearch));
-        return values;
-    }
-    // Get allKeys > ArryList
-    public ArrayList<String> getAll() {
-        ArrayList<String> toReturn = new ArrayList<String>();
-        for (Map.Entry<String, ArrayList<String>> i : data.entrySet()) {
-            toReturn.add("" + i.getKey() + "=" + data.get(i.getKey()));
-        }
-        return toReturn;
-    }
+    <table width="95%" class="table-border tile" cellspacing="20">
+      <tr>
+        <td width="25%" valign="top">
+          <center>
+            <img src="https://media.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif" width="180" height="150" alt="Fire">
+            <p class="blink"><font size="+2">CLICK EVERYTHING</font></p>
+            <p><a href="#guestbook" class="btn">SIGN GUESTBOOK</a></p>
+            <p><a href="#awards">MY AWARDS ⭐</a></p>
+            <p><a href="#links">COOL LINKS</a></p>
+            <p><a href="#clan">MY QUAKE CLAN</a></p>
+            <p><a href="#dragon">PET DRAGON</a></p>
+          </center>
+        </td>
+        <td width="75%" valign="top">
+          <marquee direction="up" height="120" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+            <p><b>NEWS (last updated: 06/06/1998)*</b><br>
+            - Got 56k modem. The future is NOW!<br>
+            - Page won <i>"Sickest Background"</i> award.<br>
+            - I learned HTML in Notepad and dreams.</p>
+          </marquee>
 
-    // *** Setter methods
-    // Set Key > add > index
-    public void set(String key, String toAdd) {
-        data.putIfAbsent(key, new ArrayList<String>());
-        data.get(key).add(toAdd);
-    }
-    // Set Key > edit > index
-    public void setAt(String key, String toAdd, String index) {
-        data.get(key).set(Integer.parseInt(index),toAdd);
-    }
+          <h1 class="rainbow">ABOUT ME</h1>
+          <p>I like <font size="+3" color="#FF0000">LASERS</font>, <font color="#00FFFF">HACKING</font>,
+             <font face="Papyrus">dragons</font>, and <u>frame-based design</u>. Best viewed 640x480.
+          </p>
 
-    // *** Remove methods
-    // Remove Key > one > index
-    public void removeAt(String key, String index) {
-        data.get(key).remove(Integer.parseInt(index));
-    }
-    // Remove Key > one > index > if match
-    public void removeIf(String key, String refference) {
-        data.get(key).remove(refference);
-    }
-    // Remove Key > all > indexes   // capitalCities.remove("England");
-    public void removeAll(String key, String refference) {
-        data.get(key).removeAll(data.get(key));
-    }
-    // Remove Key
-    public void removeKey(String key) {
-        data.remove(key);
-    }
-    // Remove HashMap          //( capitalCities.clear(); )
-    public void removeHashMap() {
-        data.clear();
-    }
-}
+          <h2 id="dragon">INTERACTIVE PET DRAGON</h2>
+          <p>Feed it cookies or it screams in MIDI.</p>
+          <img id="dragonImg" src="https://media.giphy.com/media/3o6gE2b0aXWnZ2vC9S/giphy.gif" width="200" height="200" alt="dragon">
+          <p>
+            <button class="btn" onclick="alert('*munch munch* Y2K compliant cookies!')">Feed</button>
+            <button class="btn" onclick="alert('RAAAWR (in glorious 8-bit)')">Poke</button>
+          </p>
+
+          <h2 id="awards">MY PRESTIGIOUS AWARDS</h2>
+          <p>
+            <img src="https://media.giphy.com/media/l2Sq0U9P3x3K8q0uA/giphy.gif" alt="Award" width="120">&nbsp;
+            <img src="https://media.giphy.com/media/3oEjHYlY7O0PzQ0P16/giphy.gif" alt="Award" width="120">&nbsp;
+            <img src="https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif" alt="Award" width="120">
+          </p>
+
+          <h2 id="links">COOL LINKS (join my webring)</h2>
+          <ul>
+            <li><a href="https://example.com" target="_blank">My Other Page on Geociti.es</a></li>
+            <li><a href="https://example.com" target="_blank">Totally Legal MP3z</a></li>
+            <li><a href="https://example.com" target="_blank">Free Cursors 4 Life</a></li>
+          </ul>
+
+          <h2 id="clan">MY QUAKE CLAN [BL1NK]</h2>
+          <table border="5" cellpadding="5" bgcolor="#110011">
+            <tr><th>Handle</th><th>Role</th><th>Favorite Cheese</th></tr>
+            <tr><td>_SkullH4xx0r_</td><td>RL Spam</td><td>Spray Cheese</td></tr>
+            <tr><td>Do0mUncl3</td><td>Flag Thief</td><td>Nacho</td></tr>
+            <tr><td>PrincessLag</td><td>ISP Summoner</td><td>Swiss (holy)</td></tr>
+          </table>
+
+          <h2 id="guestbook">GUESTBOOK</h2>
+          <div class="visitorbook">
+            <form onsubmit="alert('Thankz 4 signing!! Your IP is saved to my floppy.'); return false;">
+              <p>Name: <input type="text" size="20"> E-mail: <input type="text" size="20"></p>
+              <p>Your Message:<br><textarea rows="4" cols="50">omg this page rules!!1!</textarea></p>
+              <p><input type="submit" value="Submit to Space" class="btn"></p>
+            </form>
+          </div>
+
+          <p class="center">
+            <img src="https://media.giphy.com/media/3ohhwJtS9G7b7bG3QI/giphy.gif" alt="Under Construction" width="400" height="60">
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <div class="counter">VISITORS: <span id="hits">0000000</span></div>
+
+    <marquee behavior="scroll" direction="right" scrollamount="25">
+      <img src="https://media.giphy.com/media/3oEjHGrVGrqgFFknfO/giphy.gif" width="120" height="90" alt="running cat">
+      <img src="https://media.giphy.com/media/3oEjI5VtIhHvK37WYo/giphy.gif" width="120" height="90" alt="spinning">
+      <img src="https://media.giphy.com/media/l0K4lQ7i5Z3J7ZxSg/giphy.gif" width="120" height="90" alt="wow">
+    </marquee>
+
+    <p class="blink">Best viewed with: <img src="https://www.gifss.com/computer/internet/images/browsers-animated-gif-7.gif" height="32" alt="Browsers"></p>
+
+    <p>
+      <a href="#top">Back to Top</a> | <a href="mailto:webmaster@mycoolpage1997.net">Email Me on AOL</a>
+    </p>
+  </center>
+
+</body>
+</html>
